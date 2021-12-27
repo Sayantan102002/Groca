@@ -10,7 +10,7 @@ export default function Dashboard() {
                 'auth-token': localStorage.getItem('token'),
             },
         });
-        json = await response.json();
+        const json = await response.json();
         console.log(json.firstname);
     }
     useEffect(() => {
