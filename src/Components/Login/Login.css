@@ -109,7 +109,7 @@ form.login-form{
         margin-top: 1vh;
     }
     .welcomeback{
-        font-size: 2.7vw;
+        font-size: 3vw;
     }
     form.login-form{
         width:70%;
@@ -118,11 +118,15 @@ form.login-form{
     .LoginInput{
         padding-left: 2vw;
         height: 3vh;
+        width: 70%;
 
     }
     .LoginButton{
         font-size: 2.3vw;
         height: 4vh;
+    }
+    .redirect{
+        font-size:3.5vw;
     }
     
 }
