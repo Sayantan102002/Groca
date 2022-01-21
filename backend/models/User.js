@@ -10,12 +10,24 @@ const { Schema } = mongoose;
         type:String,
         required:true
     },
+    Phone_Number:{
+        type:Number,
+        required:true
+    },
     email:{
         type:String,
         required:true,
         unique:true
     },
     password:{
+        type:String,
+        required:true
+    },
+    Date_Of_Birth:{
+        type:Date,
+        required:true
+    },
+    Gender:{
         type:String,
         required:true
     },

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+.LeftNavBarForDashboard{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid green; */
+    /* background-color: #fafbfc; */
+}
+ul{
+    padding: 0;
+    margin: 0;
+    height: 0;
+}
+nav li{
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+a{
+    /* height: 0; */
+    text-decoration: none;
+    color: inherit;
+}
+.ProfileContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.ProfilePhoto{
+    height: 100%;
+    /* width: 80%; */
+    display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px; */
+    align-items: center;
+
+}
+.ProfilePhoto > img{
+    height: 70%;
+    /* width: 25%; */
+    border-radius: 50%;
+    box-shadow: rgb(233 30 99) 6px 10px 67px -5px;
+}
+.GreetingsAndName{
+    display: flex;
+    height: 80%;
+    flex-direction:column;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 1px solid red; */
+    /* font-size: 2vw;
+    font-weight: bold; */
+}
+
+.GreetingsAndName  p {
+    /* height:0; */
+    margin: 0;
+    line-height: 3vh;
+}
+.GreetingsAndName p:nth-child(1){
+    font-size:13px
+}
+.GreetingsAndName p:nth-child(2){
+    font-size:1vw;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight:600;
+}
+.DashboardNavBar p{
+    font-family: 'Merriweather', serif;
+}
+/* .Menu-Orders::before{
+    content: "";
+    border: 3px solid blue;
+} */
+.Menu-Orders,.Menu-AccountSettings,.Menu-FAQs{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 5vh;
+    padding:0 0 0 1.5vw;
+    margin: 2vh 0;
+    /* width: 100%; */
+    /* border-left: 5px solid rgb(233, 30, 99); */
+    cursor:pointer;
+    /* border-radius: 1vw; */
+    /* border: 1px solid rgb(250, 71, 71); */
+    
+}
+.Menu-Orders p,.Menu-AccountSettings p,.Menu-FAQs p{
+    color:#878787;
+    font-weight: 500;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.Menu-Logout{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 5vh;
+    padding:0 0 0 1.5vw;
+    margin: 2vh 0;
+    cursor: pointer;
+    
+    /* width: 100%; */
+    /* border-left: 5px solid rgb(233, 30, 99); */
+    /* border-radius: 1vw; */
+    /* border: 1px solid rgb(250, 71, 71); */    
+}
+.Menu-Logout p{
+    color: red;
+    font-weight: 500;
+    padding-left: 12px;
+    cursor: pointer;
+}

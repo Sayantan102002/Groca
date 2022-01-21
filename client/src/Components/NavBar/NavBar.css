@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+i{
+    cursor: pointer;
+}
+nav{
+    /* background-color: red; */
+    width: 100%;
+    height: 11vh;
+    /* position: relative; */
+}
+nav li a{
+    text-decoration: none;   
+    color: black; 
+}
+nav li{
+    /* background-color: aqua; */
+    height: 11vh;
+    /* width: 75vw; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.NavBar{
+    /* position: absolute; */
+    /* left:20vw; */
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+}
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* align-content: space-between; */
+    justify-content: space-around;
+    height: 11vh;
+    width: 50%;
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
+    /* background-color:red; */
+}
+.list img{
+    /* width: 7vw; */
+    height: 4vh;
+}
+.shopping{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* justify-content: center; */
+    height:11vh;
+    width: 10%;
+    /* margin-right: 2vw; */
+    /* background-color:yellow; */
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    
+    /* left: 50vw; */
+    justify-content: center;
+    margin: 3vh 0;
+    height: 6vh;
+    width: 100vw;
+    /* background-color: red; */
+    
+}
+.dropdown .container2{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;    
+    background-color:rgb(17, 211, 91) ;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    /* height: 3vh; */
+    width: 15vw;
+    /* box-shadow: 8px 8px 6px -10px rgb(194, 193, 193); */
+    /* height: 6vh; */
+    /* width: 15vw; */
+    
+}
+.dropdown .container2 i{
+    padding:0 1.5vw;
+}
+
+
+
+
+
+@media only screen and (max-width: 512px){
+    .NavBar{
+        display:none;
+    }
+    }

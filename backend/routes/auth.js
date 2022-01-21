@@ -1,8 +1,8 @@
 const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+// const mongoose = require('mongoose');
+// const { Schema } = mongoose;
 const bcrypt = require('bcryptjs');
 const { body, validationResult } = require('express-validator');
 var jwt = require('jsonwebtoken');
@@ -11,15 +11,18 @@ const JWT_SECRET = 'Sayantanisagoodb$oy';
 
 
 router.post('/createuser', [
-  body('password', 'Password must be atleast 5 characters').isLength({ min: 5 }),
   body('firstname', 'Enter a valid name').isLength({ min: 3 }),
   body('lastname', 'Enter a valid name'),
+  body('email', 'Enter a valid Email').isEmail(),
+  body('phone_number', 'Enter a valid Phone Number'),
+  body('date_of_birth', 'Enter a valid Date of Birth'),
+  body('gender','Gender is required'),
+  body('password', 'Password must be atleast 5 characters').isLength({ min: 5 }),
   body('cpassword', 'Password and confirm password must match').custom((value, { req }) => {
     if (value !== req.body.password)
       throw new Error('Password and confirm password must match');
     return true;
   }),
-  body('email', 'Enter a valid Email').isEmail(),
 ], async (req, res) => {
   let success = false;
   const error = validationResult(req);
@@ -37,6 +40,9 @@ router.post('/createuser', [
     user = await User.create({
       firstname: req.body.firstname,
       lastname: req.body.lastname,
+      Phone_Number: req.body.phone_number,
+      Gender:req.body.gender,
+      Date_Of_Birth: req.body.date_of_birth,
       email: req.body.email,
       password: secPass,
     })
@@ -99,12 +105,12 @@ router.post('/login', [
 
 })
 
-router.post('/getuser', fetchuser, async (req, res) => {
+router.get('/getuser', fetchuser, async (req, res) => {
   try {
 
     userId = req.user.id;
     const user = await User.findById(userId).select("-password")
-    res.send(user);
+    res.json({user});
   } catch (error) {
     console.error(error.message);
     res.status(500).send("Internal Server Error");
@@ -113,5 +119,4 @@ router.post('/getuser', fetchuser, async (req, res) => {
 })
 
 
-router.get
 module.exports = router;
