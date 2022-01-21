@@ -1,0 +1,30 @@
+.parentDashboardContainer{
+    background-color: #cac4fd;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DashboardContainer{
+    background-color: #FFFFFF;
+    width: 80%;
+    height: 90%;
+    border-radius: 2vw;
+}
+.leftNavigationbar{
+    width: 22%;
+    height: 100%;
+    float: left;
+    background-color: #f5f6f7;
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+.rightNavigationbar{
+    width: 78%;
+    height: 100%;
+    /* background-color: rgb(243, 241, 241); */
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    float: right;
+}

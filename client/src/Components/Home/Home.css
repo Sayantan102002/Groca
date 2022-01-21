@@ -1,0 +1,238 @@
+.slide1{
+    width: 100%;
+    height: 90vh;
+    margin:4vh 0;
+    background-image:url('../../assets/slide1_1440x738.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+}
+.slide1 button{
+    position: absolute;
+    top: 57%;
+    left: 8%;
+    /* transform: translate(-50%,-50%); */
+    background: white;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1vw;
+    width: 8vw;
+    height: 6vh;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.groca{
+    width: 100%;
+    height: 25vh;
+    /* background-color: blue; */
+    display:grid;
+    /* place-items: center; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2vw;
+}
+.groca .veg{
+    /* width: 30%; */
+    height: 100%;
+    background-image: url('../../assets/Veggies.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
+    background-position: right;
+    position: relative;
+    /* margin-right: 2vw; */
+        /* object-fit: cover; */
+}
+.groca .veg button{
+    position: absolute;
+    right: 3vw;
+    bottom: 5vh;
+    background: #F46F24;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: .9vw;
+    width: 6vw;
+    color: white;
+    height: 3.5vh;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.groca .fruit{
+    /* width: 30%; */
+    height: 100%;
+    background-image: url('../../assets/Fruits.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: start;
+    align-self: center;
+    position: relative;
+    /* object-fit: cover; */
+}
+.groca .fruit button{
+    position: absolute;
+    left: 16vw;
+    bottom: 5vh;
+    background: #F49524;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: .9vw;
+    width: 6vw;
+    color: white;
+    height: 3.5vh;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.Our_Products{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 98%;
+    place-items: center;
+    min-height: 60vh;
+    row-gap: 2vh;
+    margin: 2vh auto;
+    /* border: 2px solid red; */
+}
+
+
+
+@media only screen and (max-width: 500px){
+    .slide1{
+        width: 100%;
+        height: 24.7vh;
+        margin: 1vh 0;
+        /* background-color: red; */
+        background-image: url('../../assets/slide1_375x200.png');
+        background-size:cover;
+    }
+    .slide1 button{
+        height: 3vh;
+        width: 15vw;
+        font-size: 2vw;
+        left: 5%;
+        top: 68%;
+    }
+    .groca{
+        margin:4vh 0;        
+        column-gap: 0;
+        height: 27vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 2vh;
+    }
+    .groca .veg{
+        background-image: url('../../assets/Veggies_375x100.png');
+        background-position: center;
+        background-size: contain;
+    }
+    .groca .veg button{
+        right: 29%;
+        bottom: 26%;
+        width: 12vw;
+        height: 2vh;
+        font-size: 2vw;
+    }
+    .groca .fruit button{
+        bottom: 3vh;
+        left:59vw;
+        width: 12vw;
+        height: 2vh;
+        font-size: 2vw;
+    }
+    .groca .fruit{
+        background-image: url('../../assets/Fruits_375x100.png');
+        background-position: center;
+        background-size: contain;
+    }
+    .Our_Products{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        width: 98%;
+        place-items: center;
+        min-height: 60vh;
+        row-gap: 2vh;
+        margin: 2vh auto;
+    }
+}
+
+
+
+
+/* For the loading icon */
+
+.spinner {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .spinner span {
+    font-size: 2rem;
+    animation: fade 1s linear 0s infinite;
+    padding-right: 1rem;
+  }
+  
+  .half-spinner {
+    width: 2.3vw;
+    height: 5vh;
+    border: 2px solid #03fc4e;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.5s linear 0s infinite;
+  }
+  
+  .completed {
+    font-size: 2rem;
+    color: #03fc4e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bigger .5s linear;
+  }
+  
+  @keyframes bigger {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(2);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

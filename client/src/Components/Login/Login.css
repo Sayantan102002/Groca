@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap');
+::placeholder, .welcomeback{
+    font-family: 'Mulish', sans-serif;
+}
+.login{
+    width: 100vw;
+    height: 100vh;
+    /* background: #8fb9f8; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-wallpaper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background:red; */
+    background-image:url('../../assets/wallpaper2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* border-radius: 1vw; */
+    width: 100vw;
+    height: 100vh;
+}
+form.login-form{
+    height: 60%;
+    width:30%;
+    background: #fff;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+.logo-Login{
+    margin: 2vh 0 0 0;
+    width: 9vw;
+}
+.welcomeback{
+    font-weight: 800;
+    font-size: 1.3vw;
+}
+.LoginInput{
+    width: 60%;
+    margin: 0 0 2vh 0;
+    height: 5vh;
+    padding-left: 1.5vw;
+    outline: none;
+    border: 2px solid #756B6B;
+    border-radius: 10vw;
+}
+.LoginButton {
+    width: 30%;
+    height: 7vh;
+    /* margin: 0 0 0 0; */
+    background: #25AB22;
+    font-family: 'Mulish', sans-serif;
+    border: none;
+    border-radius: 5vw;
+    outline: none;
+    color: #ffffff;
+    font-size: 1vw;
+    /* font-weight: bold; */
+    cursor: pointer;
+
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:998px) {
+
+    .logo-Login{
+        width: 13vw;
+        margin-top: 1vh;
+    }
+    .welcomeback{
+        font-size: 1.8vw;
+    }
+    form.login-form{
+        width: 50%;
+        height: 50%;
+    }
+    .LoginInput{
+        padding-left: 2vw;
+    }
+    .LoginButton{
+        font-size: 2vw;
+        height: 6vh;
+    }
+    
+    
+}
+@media screen and (min-width:512px) and (max-width:768px) {
+
+    .logo{
+        width: 20vw;
+    }
+    
+    
+}
+@media screen and (min-width:0px) and (max-width:512px) {
+
+    .logo-Login{
+        width: 21vw;
+        margin-top: 1vh;
+    }
+    .welcomeback{
+        font-size: 3vw;
+    }
+    form.login-form{
+        width:70%;
+        height: 40%;
+    }
+    .LoginInput{
+        padding-left: 2vw;
+        height: 3vh;
+        width: 70%;
+
+    }
+    .LoginButton{
+        font-size: 2.3vw;
+        height: 4vh;
+    }
+    .redirect{
+        font-size:3.5vw;
+    }
+    
+}
