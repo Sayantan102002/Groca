@@ -19,8 +19,8 @@ const UserContext = (props) => {
             },
         });
         const json = await response.json();
-        console.log(json);
-        setData(json);
+        console.log(Object.values(json));
+        setData(Object.values(json));
         // localStorage.setItem('firstname', json.firstname);
         // localStorage.setItem('lastname', json.lastname);
         // localStorage.setItem('email', json.email);

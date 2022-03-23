@@ -11,8 +11,8 @@
 }
 .slide1 button{
     position: absolute;
-    top: 57%;
-    left: 8%;
+    top: 62%;
+    left: 7.5%;
     /* transform: translate(-50%,-50%); */
     background: white;
     border: none;
@@ -96,7 +96,7 @@
 .Our_Products{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
     width: 98%;
     place-items: center;
     min-height: 60vh;
@@ -104,7 +104,9 @@
     margin: 2vh auto;
     /* border: 2px solid red; */
 }
-
+.OfferPage, .Newsletter{
+  margin: 7vh 0;
+}
 
 
 @media only screen and (max-width: 500px){
@@ -157,7 +159,7 @@
     }
     .Our_Products{
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
         width: 98%;
         place-items: center;
         min-height: 60vh;

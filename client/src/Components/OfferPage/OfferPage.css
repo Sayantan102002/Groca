@@ -1,0 +1,24 @@
+.OfferBanner{
+    max-width: 100%;
+    height: 60vh;
+    background:url('../../assets/OfferPageImg_1440x400.png');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    object-fit: cover;
+    background-size: cover;
+    margin: 0 0 2vh 0;
+}
+
+@media screen and (max-width: 500px) {
+    .OfferBanner{
+        width: 100%;
+        height: 24.7vh;
+        background-image: url('../../assets/OfferPageImg_428x200.png');
+        background-size: contain;
+        /* display: flex;
+        justify-content:center;
+        align-items:center; */
+        object-fit: center;
+    }
+}
+    

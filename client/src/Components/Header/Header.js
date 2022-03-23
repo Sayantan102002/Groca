@@ -8,7 +8,7 @@ export default function Header() {
                 <div className="container">
                     <div className="contents">
                         <i className="fa fa-phone"></i>
-                        <p type="tel">(+91)790 837 5185 | <i className="fa fa-envelope"></i>  info@groca.com</p>
+                        <p type="tel">(+91)7908 375 185 | <i className="fa fa-envelope"></i>  info@groca.com</p>
                     </div>
                     <div className="social_media">
                         <a href="#"><i className="fa fa-twitter"></i></a>

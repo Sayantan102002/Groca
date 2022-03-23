@@ -8,6 +8,9 @@ import logo from '../../assets/logo.png';
 // import Carousel from '../Carousel/Carousel';
 import SearchBar from '../SearchBar/SearchBar';
 import Cards from '../Cards/Cards';
+import OfferPage from '../OfferPage/OfferPage';
+import Footer from '../Footer/Footer';
+import Newsletter from '../NewsLetter/Newsletter';
 // import veggies from '../../assets/Veggies.png';
 // import fruits from '../../assets/Fruits.png';
 export default function Home() {
@@ -74,6 +77,15 @@ export default function Home() {
                         {product.map((product2, index) => {
                             return <Cards key={index} Sale={product2.sale} SaleDiscount={product2.saleDiscount} Weights={product2.weights} Price={product2.price} Title={product2.title} Img={product2.image} id={product2._id} />
                         })}
+                    </div>
+                    <div className="OfferPage">
+                        <OfferPage/>
+                    </div>
+                    <div className="Newsletter">
+                        <Newsletter/>
+                    </div>
+                    <div className="footer">
+                        <Footer/>
                     </div>
                 </>
             )}

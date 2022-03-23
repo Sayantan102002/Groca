@@ -29,3 +29,33 @@
     color:white;
     padding:0 1vw;
 }
+
+
+@media screen and (max-width: 500px) {
+    .contact{
+        height: 3vh;
+    }
+    .container{
+        left: 0;
+        width: 100%;
+        align-items: center;
+        height: 3vh;
+
+    }
+    .contents{
+        flex-direction: row;
+        align-items: center;
+    }
+    .social_media{
+        flex-direction: column;
+        align-items: center;
+    }
+    .social_media a{
+        padding:0 1vw;
+        color: white;
+    }
+    .contents i{
+        color:white;
+        padding:0 1vw;
+    }
+}
