@@ -19,18 +19,29 @@ const UserContext = (props) => {
             },
         });
         const json = await response.json();
+        // localStorage.setItem('firstname', json.email);
+        // localStorage.setItem('lastname', json.lastname);
         console.log(Object.values(json));
         setData(Object.values(json));
-        // localStorage.setItem('firstname', json.firstname);
-        // localStorage.setItem('lastname', json.lastname);
         // localStorage.setItem('email', json.email);
         // localStorage.setItem('phone_number', json.Phone_Number);
         // localStorage.setItem('gender', json.Gender);
         // localStorage.setItem('Date Of Birth', json.Date_Of_Birth);
     }
-
+    const updateDetails = async (id, firstname, lastname, email, Phone_Number) => {
+        const response = await fetch(`${host}/api/auth/updateDetails/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token'),
+            },
+            body: JSON.stringify({ firstname, lastname, email, Phone_Number })
+        })
+        const json = await response.json();
+        console.log(json);
+    }
     return (
-        <Contextinit.Provider value={{ getUser, UserData }}>
+        <Contextinit.Provider value={{ getUser, UserData,updateDetails }}>
             {props.children}
         </Contextinit.Provider>
     )

@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner1 from '../../assets/FooterBanner_1067x120.png'
-import Banner2 from '../../assets/FooterBanner_350x50.png'
+// import Banner2 from '../../assets/FooterBanner_350x50.png'
 import './Footer.css';
-import logo from '../../assets/logo.png';
+// import logo from '../../assets/logo.png';
 export default function Footer() {
     return (
         <div className="FooterContainer">
