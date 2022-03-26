@@ -16,7 +16,7 @@ router.post('/createuser', [
   body('email', 'Enter a valid Email').isEmail(),
   body('phone_number', 'Enter a valid Phone Number'),
   body('date_of_birth', 'Enter a valid Date of Birth'),
-  body('gender','Gender is required'),
+  body('gender', 'Gender is required'),
   body('password', 'Password must be atleast 5 characters').isLength({ min: 5 }),
   body('cpassword', 'Password and confirm password must match').custom((value, { req }) => {
     if (value !== req.body.password)
@@ -41,7 +41,7 @@ router.post('/createuser', [
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       Phone_Number: req.body.phone_number,
-      Gender:req.body.gender,
+      Gender: req.body.gender,
       Date_Of_Birth: req.body.date_of_birth,
       email: req.body.email,
       password: secPass,
@@ -110,11 +110,34 @@ router.get('/getuser', fetchuser, async (req, res) => {
 
     userId = req.user.id;
     const user = await User.findById(userId).select("-password")
-    res.json({user});
+    res.json({ user });
   } catch (error) {
     console.error(error.message);
     res.status(500).send("Internal Server Error");
 
+  }
+})
+
+router.put('/updateDetails/:id', fetchuser, async (req, res) => {
+  try {
+    const {firstname, lastname,email,Phone_Number} = req.body;
+    let newDetails={};
+    if(firstname) newDetails.firstname=firstname;
+    if(lastname) newDetails.lastname=lastname;
+    if(email) newDetails.email=email;
+    if(Phone_Number) newDetails.Phone_Number=Phone_Number;
+    let finduser= await User.findById(req.params.id);
+    if(!finduser)
+      return res.status(400).send("Not Found");
+    // if(finduser._id!==req.user.id)
+    //   return res.status(403).send("Unauthorized");
+    finduser =await User.findByIdAndUpdate(req.params.id,{ $set: newDetails }, { new: true });
+    res.json({finduser})
+    
+  }
+  catch (error) {
+    console.error(error.message);
+    res.status(500).send("Some Error Ocurred");
   }
 })
 

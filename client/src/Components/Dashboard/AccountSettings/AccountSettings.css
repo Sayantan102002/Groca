@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 .parentDashboardContainer{
     /* background-color: #cac4fd; */
     height: 100vh;
@@ -21,10 +23,63 @@
     border-bottom-left-radius: 2vw;
 }
 .rightNavigationbar{
-    width: 78%;
+    width: 75%;
     height: 100%;
     /* background-color: rgb(243, 241, 241); */
+    /* border: 2px solid red; */
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
     float: right;
+}
+.header_personalInfo_div{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    /* border:2px solid red; */
+    align-items: center;
+    margin-top: 2vh;
+    width: 30%;
+}
+.header_personalInfo_div p{
+    /* margin: .9vh 1vw .9vh 0vw; */
+    margin: 0;
+    font-size: 2.5vh;
+    color: #2874f0;
+    font-weight: 500;
+    cursor: pointer;
+}
+.header_personalInfo{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+.nameInput_edit{
+    /* border: 2px solid blue; */
+    width: fit-content;
+}
+.nameInput_edit_firstname, .nameInput_edit_lastname{
+    margin:0 1vw 0 0;
+    padding: 2vh;
+    border: 1px solid #e0e0e0;
+    color: #878787;
+    width: 14vw;
+    outline: none;
+}
+.PersonalName_Form{
+    display:flex;
+    /* border: 1px solid green; */
+    flex-direction: row;
+    width: fit-content;
+    justify-content:space-between;
+    margin: 2vh 0 0 0;
+}
+.editPersonalInfo_name_SubmitButton{
+    outline:none;
+    background-color:rgb(53, 218, 53);
+    font-family: Roboto,Arial,sans-serif;
+    color:white;
+    border: none;
+    cursor: pointer;
+    display:none;
+    padding:2vh 2vw;
+    border-radius:3px;
 }

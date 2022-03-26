@@ -1,3 +1,3 @@
 import {createContext} from 'react';
-const dashContext = createContext();
-export default dashContext;
+const DashContext = createContext();
+export default DashContext;
